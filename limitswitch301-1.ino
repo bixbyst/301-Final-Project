@@ -24,7 +24,7 @@ int laststartstate;
 int switch1currentstate;
 int switch2currentstate;
 int switch3currentstate;
-int laststartstate; 
+int startcurrentstate; 
 
 unsigned long lastDebounceTime = 0;
 unsigned long debounceDelay = 50; 
@@ -162,7 +162,7 @@ void loop(){
 
       if((switch3currentstate == HIGH) && (count == 3)){
         count++;
-       Serial.println("\nSwitch 3 Section 2");            //If switch 3 pressed -- S3 CCW
+       Serial.println("\nSwitch 3 Section 2");            //If switch 3 pressed -- S2 CCW
  
        if(pass == 4){                                   //if it is the fifth pass, skip to case 5
         count = 5;
