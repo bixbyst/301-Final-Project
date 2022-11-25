@@ -4,8 +4,8 @@ const int switch1 = 2;   //0 or 360 degrees
 const int switch2 = 4;   //120 degrees 
 const int switch3 = 8;   //240 degrees 
 const int startbutton = 7; 
-const int LEDon = 9;   //On 
-const int LEDdone = 10;   //Done
+const int LED1 = 9;   //On 
+const int LED2 = 10;   //Done
   
 //int i;
 int count = 0; //switch count variable 
@@ -24,7 +24,7 @@ int laststartstate;
 int switch1currentstate;
 int switch2currentstate;
 int switch3currentstate;
-int startcurrentstate; 
+int startcurrentstate;
 
 unsigned long lastDebounceTime = 0;
 unsigned long debounceDelay = 50; 
@@ -162,7 +162,7 @@ void loop(){
 
       if((switch3currentstate == HIGH) && (count == 3)){
         count++;
-       Serial.println("\nSwitch 3 Section 2");            //If switch 3 pressed -- S2 CCW
+       Serial.println("\nSwitch 3 Section 2");            //If switch 3 pressed -- S3 CCW
  
        if(pass == 4){                                   //if it is the fifth pass, skip to case 5
         count = 5;
@@ -266,7 +266,7 @@ case 6:
  lastswitch3state = switch3state; 
 } //end
     
-  case 6: 
+  case 7: 
    break;
    
   
