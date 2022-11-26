@@ -66,7 +66,7 @@ void loop(){
     digitalWrite(LED1, LOW);
     digitalWrite(LED2, LOW);
 
-    if(switch1state != lastswitch1state){
+    if(startstate != laststartstate){
       lastDebounceTime = millis();
     }
 
